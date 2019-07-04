@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/hanywang2/npm-package/issues"
   },
-  "homepage": "https://github.com/hanywang2/npm-package#readme"
+  "homepage": "https://github.com/hanywang2/npm-package#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cli-progress": "^2.1.1",
+    "qoa": "^0.2.0"
+  }
 }
