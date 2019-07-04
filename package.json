@@ -1,0 +1,24 @@
+{
+  "name": "hanny",
+  "version": "1.0.0",
+  "description": "A personalized quiz about the marvelous Han Yi Wang",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanywang2/npm-package.git"
+  },
+  "keywords": [
+    "hanny",
+    "hanyiwang",
+    "wang"
+  ],
+  "author": "Han Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanywang2/npm-package/issues"
+  },
+  "homepage": "https://github.com/hanywang2/npm-package#readme"
+}
