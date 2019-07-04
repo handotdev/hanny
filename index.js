@@ -3,26 +3,35 @@ const _cliProgress = require('cli-progress');
 const qoa = require('qoa');
 const {log} = console;
 
-log(chalk.red("  _   _                         "));
-log(chalk.red(" | | | | __ _ _ __  _ __  _   _ "));
-log(chalk.red(" | |_| |/ _` | '_ \\| '_ \\| | | |"));
-log(chalk.red(" |  _  | (_| | | | | | | | |_| |"));
-log(chalk.red(" |_| |_|\\__,_|_| |_|_| |_|\\__, |"));
-log(chalk.red("                          |___/ "));
+log(chalk.red("  _   _                                     _   ___  "));
+log(chalk.red(" | | | | __ _ _ __  _ __  _   _    __   __ / | / _ \\ "));
+log(chalk.red(" | |_| |/ _` | '_ \\| '_ \\| | | |   \\ \\ / / | || | | |"));
+log(chalk.red(" |  _  | (_| | | | | | | | |_| |    \\ V /  | || |_| |"));
+log(chalk.red(" |_| |_|\\__,_|_| |_|_| |_|\\__, |     \\_/   |_(_)___/ "));
+log(chalk.red("                          |___/                      "));
+log();
 log(chalk.bold("Welcome to Hanny, the best npm package about Han Wang."));
 
 const begin = {
     type: 'confirm',
-    query: 'Do you wanna answer questions about Han to satisfy his ego?',
-    handle: 'update',
+    query: 'Do you want to answer questions about Han?',
+    handle: 'type',
     accept: 'y',
     deny: 'n'
   };
 
-  const qs = [
+const again = {
+    type: 'confirm',
+    query: 'Want to try again?',
+    handle: 'type',
+    accept: 'y',
+    deny: 'n'
+};
+
+const qs = [
     {
         type: 'quiz',
-        query: 'What is Han\' favorite movie?',
+        query: 'What is Han\'s favorite movie?',
         handle: 'a',
         answer: 'Hello Mr. Billionaire (2018)',
         symbol: '>',
@@ -98,7 +107,7 @@ const begin = {
     },
     {
         type: 'quiz',
-        query: 'What is Han\' favorite sport?',
+        query: 'What is Han\'s favorite sport?',
         handle: 'a',
         answer: 'Hockey',
         symbol: '>',
@@ -113,7 +122,7 @@ const begin = {
     },
     {
         type: 'quiz',
-        query: 'What genre of music does Han listen to when he\'s programing?',
+        query: 'What genre of music does Han listen to when he\'s programming?',
         handle: 'a',
         answer: 'EDM',
         symbol: '>',
@@ -128,7 +137,7 @@ const begin = {
     },
     {
         type: 'quiz',
-        query: 'What is Han\' zodiac sign?',
+        query: 'What is Han\'s zodiac sign?',
         handle: 'a',
         answer: 'Virgo',
         symbol: '>',
@@ -143,7 +152,7 @@ const begin = {
     },
     {
         type: 'quiz',
-        query: 'What is Han\' favorite US state?',
+        query: 'What is Han\'s favorite US state?',
         handle: 'a',
         answer: 'California',
         symbol: '>',
@@ -158,7 +167,7 @@ const begin = {
     },
     {
         type: 'quiz',
-        query: 'What is Han\' proudest accomplishment?',
+        query: 'What is Han\'s proudest accomplishment?',
         handle: 'a',
         answer: 'Being on Google Street View',
         symbol: '>',
@@ -203,103 +212,103 @@ const begin = {
     },
     {
         type: 'input',
-        query: '(True or False) Han once got a cast for six months from skiing. [t/f]',
+        query: '(True or False)\nHan once got a cast from skiing. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han uses a different password for every account. [t/f]',
+        query: '(True or False)\nHan uses a different password for every account. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han has a bottle of maple syrup in his dorm room right now. [t/f]',
+        query: '(True or False)\nHan has a bottle of maple syrup in his dorm room right now. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Even though he has never been there, Han says that his favorite country is France. [t/f]',
+        query: '(True or False)\nEven though he has never been there, Han says that his favorite country is France. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han pronounces southern south-ern. [t/f]',
+        query: '(True or False)\nHan pronounces southern south-ern. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han read the 50-shades trilogy when he was 14. [t/f]',
+        query: '(True or False)\nHan read the 50-shades trilogy when he was 14. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han worked as a Starbucks barista in his senior year of high school. [t/f]',
+        query: '(True or False)\nHan worked as a Starbucks barista in his senior year of high school. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han once competed in a gymnastics competition at Tsinghua University. [t/f]',
+        query: '(True or False)\nHan once competed in a gymnastics competition at Tsinghua University. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han once blacked out at a party in Toronto. [t/f]',
+        query: '(True or False)\nHan once blacked out at a party in Toronto. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han interviewed for a job at the Canadian Security Intelligence Service. [t/f]',
+        query: '(True or False)\nHan interviewed for a job at the Canadian Security Intelligence Service. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) While Han loves politics, he has never actually voted. [t/f]',
+        query: '(True or False)\nWhile Han loves politics, he has never actually voted. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han can name the capital of every country. [t/f]',
+        query: '(True or False)\nHan can name the capital of every country. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han has watched Friends back to back three times. [t/f]',
+        query: '(True or False)\nHan has watched Friends back to back three times. [t/f]',
         handle: 'a',
         answer: 'f'
     },
     {
         type: 'input',
-        query: '(True or False) Han favorite TV series is House of Cards. [t/f]',
+        query: '(True or False)\nHan\'s favorite TV series is House of Cards. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han was once suspended in elementary school for slapping another kid. [t/f]',
-        handle: 'a',
-        answer: 'f'
-    },
-    {
-        type: 'input',
-        query: '(True or False) Han\'s phone is in french. [t/f]',
+        query: '(True or False)\nHan was once suspended in middle school for slapping another kid. [t/f]',
         handle: 'a',
         answer: 't'
     },
     {
         type: 'input',
-        query: '(True or False) Han\'s once jumped in a pool while wearing yeezys. [t/f]',
+        query: '(True or False)\nHan\'s phone is in french. [t/f]',
+        handle: 'a',
+        answer: 't'
+    },
+    {
+        type: 'input',
+        query: '(True or False)\nHan\'s once jumped in a pool while wearing yeezys. [t/f]',
         handle: 'a',
         answer: 'f'
     },
@@ -327,31 +336,62 @@ const begin = {
     let conf = qoa.prompt([begin]);
     let result = await conf;
     
-    if (result.update) {
-        log('\n')
-        let used = [];
-
-        for (let i = 1; i <= 7; i++) {
-            let rand = Math.floor(Math.random() * qs.length);
-
-            if (!(rand in used)) {
-                log(chalk.whiteBright.bgRed(`  Question ${i}/7:  `));
-                let question = qoa.prompt([qs[rand]]);
-                let answer = await question;
-
-                if (qs[rand].type === 'input') {
-                    log(qs[rand].answer);
-                }
-                log(answer);
-                log('\n')
-
-                used.push(rand);
-
-            } else {
-                i--;
-            }
-
-        }
+    if (result.type) {
+        round();
     }
 
 })();
+
+async function round() {
+    qoa.clearScreen();
+    log('\n')
+    let used = [];
+    let score = 0;
+
+    for (let i = 1; i <= 7; i++) {
+        let rand = Math.floor(Math.random() * qs.length);
+
+        if (!used.includes(rand)) {
+            log(chalk.whiteBright.bgRed(`  Question ${i}/7:  `));
+            let question = qoa.prompt([qs[rand]]);
+            let answer = await question;
+
+            if (qs[rand].type === 'input') {
+                if (qs[rand].answer === answer.a) {
+                    log(chalk.green('Correct'));
+                    score++;
+                } else {
+                    log(chalk.red('Wrong'));
+                    let longate = {t:'true', f:'false'};
+                    if (longate[qs[rand].answer]) {
+                        log(chalk.gray(`The correct answer is ${longate[qs[rand].answer]}`));
+                    } else {
+                        log(chalk.gray(`The correct answer is ${qs[rand].answer}`));
+                    }
+                }
+            } else if (qs[rand].type === 'quiz') {
+                if (answer.a.isCorrect) {
+                    log(chalk.green('Correct'));
+                    score++;
+                } else {
+                    log(chalk.red('Wrong'));
+                    log(chalk.gray(`The correct answer is ${qs[rand].answer}`));
+                }
+            }
+            log('\n')
+
+            used.push(rand);
+
+        } else {
+            i--;
+        }
+
+    }
+    log(chalk.whiteBright.bgRed.bold(`  You got ${score} correct  `));
+    let another = qoa.prompt([again]);
+    let res = await another;
+
+    if (res.type) {
+        round();
+    }
+}
