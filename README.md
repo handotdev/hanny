@@ -2,9 +2,7 @@
 [![Build](https://travis-ci.org/hanywang2/hanny.svg?branch=master)](https://travis-ci.org/hanywang2/hanny)
   
 ## Quick Installation
-This is a global [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/).  
-In order to install this package, download and install [download and install Node.js](https://nodejs.org/en/download/).  
-Installation can be done with [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+Package installation can be done with [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 ```
 $ npm install -g hanny
 ```
@@ -14,7 +12,7 @@ $ npm install -g hanny
 const han = require('hanny');
 
 han.randomQuestion();
-// Returns a random question {question: 'What is Han's favorite color', answer: 'Red'}
+// Returns a random question {query: 'What is Han's favorite color?', answer: 'Red'}
 ```
 
 ## Licsense

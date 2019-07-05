@@ -16,7 +16,6 @@ log(chalk.red("                          |___/                      "));
 log();
 log(chalk.bold("Welcome to Hanny, the best npm package about Han Wang."));
 
-    
 (async function() {
     let conf = qoa.prompt([ques.begin]);
     let result = await conf;

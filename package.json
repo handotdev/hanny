@@ -6,7 +6,6 @@
   "bin": {
     "hanny": "./bin/index.js"
   },
-  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hanywang2/npm-package.git"
