@@ -8,12 +8,13 @@ $ npm install -g hanny
 ```
 
 ## Usage
+Start the quiz using the following CLI command:
 ```
 $ hanny
 ```
 
 ## Local Use
-```JavaScript
+```js
 const han = require('hanny');
 
 han.randomQuestion();
