@@ -1,5 +1,4 @@
 ![alt text](https://raw.githubusercontent.com/hanywang2/hanny/master/img/hanny.png "Logo Title Text 1")
-📦 Han's personal npm package.
 
 [![Build](https://travis-ci.org/hanywang2/hanny.svg?branch=master)](https://travis-ci.org/hanywang2/hanny)
   
@@ -16,9 +15,9 @@ $ npm install -g hanny
 const han = require('hanny');
 
 han.randomQuestion();
-// Returns a random question {question: 'What is Han's favorite color'}
+// Returns a random question {question: 'What is Han's favorite color', answer: 'Red'}
 ```
 
 ## Licsense
-[MIT](LICENSE)
+[MIT](LICENSE) © Han Wang
 
