@@ -1,10 +1,7 @@
 ![alt text](https://raw.githubusercontent.com/hanywang2/hanny/master/img/hanny.png "Logo Title Text 1")
 📦 Han's personal npm package.
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![Linux Build][travis-image]][travis-url]
-[![Windows Build][appveyor-image]][appveyor-url]
+[![Build](https://travis-ci.org/hanywang2/hanny.svg?branch=master)](https://travis-ci.org/hanywang2/hanny)
   
 ## Quick Installation
 This is a global [Node.js](https://nodejs.org/en/) module available through the [npm registry](https://www.npmjs.com/).
@@ -24,6 +21,4 @@ han.randomQuestion();
 
 ## Licsense
 [MIT](LICENSE)
-
-> Look ma! I'm on the internet!
 
