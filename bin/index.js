@@ -6,13 +6,14 @@ const qoa = require('qoa');
 const {log} = console;
 
 const ques = require('../lib/questions')
-    
-log(chalk.red("  _   _                                     _   ___  "));
-log(chalk.red(" | | | | __ _ _ __  _ __  _   _    __   __ / | / _ \\ "));
-log(chalk.red(" | |_| |/ _` | '_ \\| '_ \\| | | |   \\ \\ / / | || | | |"));
-log(chalk.red(" |  _  | (_| | | | | | | | |_| |    \\ V /  | || |_| |"));
-log(chalk.red(" |_| |_|\\__,_|_| |_|_| |_|\\__, |     \\_/   |_(_)___/ "));
-log(chalk.red("                          |___/                      "));
+
+//ASCII text at http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20 with Standard Font
+log(chalk.red("  _   _                                 _   _ "));
+log(chalk.red(" | | | | __ _ _ __  _ __  _   _  __   _/ | / |"));
+log(chalk.red(" | |_| |/ _` | '_ \\| '_ \\| | | | \\ \\ / / | | |"));
+log(chalk.red(" |  _  | (_| | | | | | | | |_| |  \\ V /| |_| |"));
+log(chalk.red(" |_| |_|\\__,_|_| |_|_| |_|\\__, |   \\_/ |_(_)_|"));
+log(chalk.red("                          |___/               "));
 log();
 log(chalk.bold("Welcome to Hanny, the best npm package about Han Wang."));
 
