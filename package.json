@@ -1,6 +1,6 @@
 {
   "name": "hanny",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A personalized quiz about the marvelous Han Yi Wang",
   "main": "./lib/questions.js",
   "bin": {
